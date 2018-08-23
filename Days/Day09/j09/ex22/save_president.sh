@@ -1,1 +1,0 @@
-chflogs uchg president.txt
