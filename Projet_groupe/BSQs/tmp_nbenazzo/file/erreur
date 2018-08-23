@@ -1,0 +1,38 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    erreur                                             :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: nbenazzo <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/08/20 16:01:44 by nbenazzo          #+#    #+#              #
+#    Updated: 2018/08/20 16:12:15 by nbenazzo         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+char INFO[4] => nbr_ligne , char vide, char obstacle, char plein.
+
+
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+_____
+  |		Meme nombre de colonne sur chaque ligne
+  |		Au moins une ligne d'une case
+  |		un \n a la fin de chaque ligne
+  |		
+__|__
+
+ __
+|  |	Que faire si la grille ne contient que des obstacles 
+   |	
+  _|
+  |
+  *
+
+/ \
+| |		Si error : map error + \n
+| |		EMPTY LINE
+| |		lecture du tableau d'apres
+| |		EMPTY LINE
+| |
+* *

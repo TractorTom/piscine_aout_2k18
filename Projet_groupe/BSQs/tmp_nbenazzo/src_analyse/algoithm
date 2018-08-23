@@ -1,0 +1,52 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_search_square.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tbarthel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/08/19 19:19:44 by tbarthel          #+#    #+#             */
+/*   Updated: 2018/08/21 01:49:51 by tbarthel         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_header.h"
+
+void	ft_search_square(char **tab, int length)
+{
+	int		i;
+
+	i = 0;
+	while (i < length)
+	{
+		1) parcours de tout les rectangles existant et pour chaque rectangle 
+			on fait :
+			1) si il a des obstacles sur la longueur du rectangle, 
+			calcul des nouvelles longueurs
+				1) si il existe une nouvelle longueur > (strict) a la hauteur
+				du rectangle alors 
+				 .  on destroy le rectangle (en mettant de cote les parametres 
+						du rectangle)
+				 .  pour chacune des nl > hauteur, 
+						.. soit on cree un nouveau rectangle avec la 
+							hauteur +1, la longueur = nl et le point 
+							d'origine decale
+						.. soit on cree un carre que l'on compare avec le
+							carre max (et on enregistre pas de nouveaux
+							rectangles)	
+				2) si toutes les longueurs sont inf (ou egales) alors
+				.  on destroy le rectangle et on compare le plus grand carre 
+						forme (forcement la hauteur est le plus petit parametre)
+			2) si il n'y a aucun obstacles sur la longeur du rectangle alors
+				. soit hauteur + 1 == longueur et alors on compare le carre
+					forme avec le plus grand carre
+				. soit on aug;ente seulement la hauteur de 1
+		2) parcours de la ligne pour creer et rajouter a la liste tout
+			les nouveaux rectangles de hauteur 1
+
+		Cas de la derniere ligne ou on ne va enregistrer aucun nouveaux
+		rectangles et juste tester les carres max forme (genre min de hauteur
+		x longueur) avec le carre max.
+	}	
+
+}
